@@ -1,0 +1,70 @@
+{
+  "name": "@humanwhocodes/disqus-export",
+  "version": "0.0.0",
+  "description": "Disqus comment exporter",
+  "main": "src/disqus-export.cjs",
+  "module": "src/disqus-export.js",
+  "bin": {
+    "disqus-export": "dist/cli.js"
+  },
+  "type": "module",
+  "types": "dist/disqus-export.d.ts",
+  "exports": {
+    "require": "./src/disqus-export.cjs",
+    "import": "./src/disqus-export.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ]
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/nzakas"
+  },
+  "scripts": {
+    "build": "rollup -c && tsc",
+    "prepare": "npm run build",
+    "lint": "eslint src/ tests/",
+    "test": "c8 mocha tests/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/humanwhocodes/disqus-export.git"
+  },
+  "keywords": [
+    "disqus",
+    "comments",
+    "exporter"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "author": "Nicholas C. Zaks",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/node": "^18.7.6",
+    "c8": "7.12.0",
+    "chai": "4.3.6",
+    "eslint": "8.21.0",
+    "lint-staged": "13.0.3",
+    "mocha": "9.2.2",
+    "rollup": "2.77.2",
+    "typescript": "4.7.4",
+    "yorkie": "2.0.0"
+  },
+  "dependencies": {
+    "@humanwhocodes/env": "^2.2.2",
+    "dotenv": "^16.0.3",
+    "yargs": "^16.2.0"
+  }
+}

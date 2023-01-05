@@ -1,0 +1,14 @@
+{
+    "include": [
+        "src/disqus-export.js"
+    ],
+    "compilerOptions": {
+        "declaration": true,
+        "emitDeclarationOnly": true,
+        "allowJs": true,
+        "checkJs": true,
+        "target": "ES2022",
+        "module": "ES2022",
+        "outDir": "dist"
+    }
+}
