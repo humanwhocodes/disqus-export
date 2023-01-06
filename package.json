@@ -1,6 +1,6 @@
 {
   "name": "@humanwhocodes/disqus-export",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Disqus comment exporter",
   "main": "src/disqus-export.cjs",
   "module": "src/disqus-export.js",
