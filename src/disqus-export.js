@@ -3,5 +3,5 @@
  * @author Nicholas C. Zakas
  */
 
-export * from "./downloader.js";
-export * from "./processor.js";
+export { Downloader } from "./downloader.js";
+export { Processor } from "./processor.js";

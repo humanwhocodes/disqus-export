@@ -3,6 +3,8 @@
  * @author Nicholas C. Zakas
  */
 
+/** @typedef {import('./disqus.js').DisqusComment} DisqusComment */
+
 //-----------------------------------------------------------------------------
 // Exports
 //-----------------------------------------------------------------------------
@@ -14,7 +16,9 @@ export class Processor {
 
     /**
      * Processes comments so that they are grouped by thread.
-     * @param {Array<Object>} comments The Disqus comments to process. 
+     * @param {Array<DisqusComment>} comments The Disqus comments to process.
+     * @returns {Object} An object whose keys are the URLs for which there are
+     *  comment threads and whose values are the threads themselves. 
      */
     process(comments) {
 

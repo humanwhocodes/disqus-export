@@ -3,6 +3,8 @@
  * @author Nicholas C. Zakas
  */
 
+/** @typedef {import('./disqus.js').DisqusComment} DisqusComment */
+
 //-----------------------------------------------------------------------------
 // Constants
 //-----------------------------------------------------------------------------
@@ -58,6 +60,7 @@ export class Downloader {
 
     /**
      * Downloads the specified number of comments.
+     * @returns {Promise<Array<DisqusComment>>} An array of comments.
      */
     async download() {
 
